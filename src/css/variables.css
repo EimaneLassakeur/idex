@@ -1,0 +1,40 @@
+:root {
+    --primary: #024e7e;
+    --secondary: #fb8928;
+
+    --dark: #0d1117;
+
+    --white: #ffffff;
+
+    --gray: #f7f8fa;
+
+    --text: #222222;
+
+    --border: #e5e7eb;
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    --radius-full: 999px;
+
+    --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
+
+    --container: 1400px;
+
+    --transition: 0.3s ease;
+
+    --gradient-primary: linear-gradient(135deg, #024E7E, #0D6EAF);
+
+    --gradient-orange: linear-gradient(135deg, #FB8928, #FFB15E);
+
+    --gradient-dark: linear-gradient(135deg, #0D1117, #1E293B);
+
+    --card-bg: linear-gradient(135deg,
+            rgba(255, 255, 255, .95),
+            rgba(255, 255, 255, .75));
+}

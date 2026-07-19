@@ -1,0 +1,189 @@
+.portfolio {
+
+    background: var(--dark);
+
+    color: white;
+
+}
+
+.portfolio-header {
+
+    margin-bottom: 60px;
+
+}
+
+.filters {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 60px;
+
+}
+
+.filters button {
+
+    padding: 14px 26px;
+
+    border-radius: 50px;
+
+    background: #1c232b;
+
+    color: white;
+
+    transition: .3s;
+
+}
+
+.filters button.active {
+
+    background: var(--secondary);
+
+}
+
+.filters button:hover {
+
+    background: var(--primary);
+
+}
+
+.portfolio-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+}
+
+.portfolio-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    height: 450px;
+
+}
+
+.portfolio-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .6s;
+
+}
+
+.overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(transparent,
+
+            rgba(0, 0, 0, .85));
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 35px;
+
+    opacity: 0;
+
+    transition: .35s;
+
+}
+
+.overlay span {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, .15);
+
+    backdrop-filter: blur(10px);
+
+    margin-bottom: 20px;
+
+}
+
+.overlay h3 {
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+}
+
+.overlay button {
+
+    padding: 14px 26px;
+
+    border-radius: 40px;
+
+    background: var(--secondary);
+
+    color: white;
+
+    transition: .3s;
+
+}
+
+.overlay button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+.portfolio-card:hover img {
+
+    transform: scale(1.1);
+
+}
+
+.portfolio-card:hover .overlay {
+
+    opacity: 1;
+
+}
+
+@media(max-width:1100px) {
+
+    .portfolio-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:700px) {
+
+    .portfolio-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

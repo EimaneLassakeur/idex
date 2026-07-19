@@ -1,0 +1,211 @@
+.services{
+
+    background:white;
+
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:#eef6fb;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.section-title{
+
+    font-size:56px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+.section-description{
+
+    width:700px;
+
+    max-width:100%;
+
+    color:#666;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:70px;
+
+}
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.service-card{
+
+    position:relative;
+
+    background:white;
+
+    padding:45px 35px;
+
+    border-radius:28px;
+
+    border:1px solid var(--border);
+
+    transition:.35s;
+
+    overflow:hidden;
+
+}
+
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+    135deg,
+    rgba(2,78,126,.04),
+    rgba(251,137,40,.05)
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+    pointer-events: none; 
+
+}
+
+.service-card:hover::before{
+
+    opacity:1;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.service-icon{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:24px;
+
+    background:#eef6fb;
+
+    color:var(--primary);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+    transition:.35s;
+
+}
+
+.service-card:hover .service-icon{
+
+    background:var(--secondary);
+
+    color:white;
+
+    transform:rotate(-8deg) scale(1.05);
+
+}
+
+.service-card h3{
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+.service-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.service-link{
+
+    cursor:pointer;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    transition:.3s;
+
+    background: none;
+
+}
+
+.service-card:hover .service-link{
+
+    color:var(--secondary);
+
+}
+
+@media(max-width:1200px){
+
+.services-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.services-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.section-title{
+
+font-size:42px;
+
+}
+
+}

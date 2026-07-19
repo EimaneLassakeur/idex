@@ -1,0 +1,191 @@
+.contact {
+
+    background: #fff;
+
+}
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: start;
+
+}
+
+.contact-info h2 {
+
+    font-size: 56px;
+
+    line-height: 1.2;
+
+    color: var(--primary);
+
+    margin: 20px 0;
+
+}
+
+.contact-info p {
+
+    font-size: 18px;
+
+    line-height: 2;
+
+    color: #666;
+
+    margin-bottom: 40px;
+
+}
+
+.info-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 25px;
+
+    font-size: 17px;
+
+}
+
+.info-item a:hover{
+
+    color:var(--secondary);
+
+}
+
+.info-item svg {
+
+    color: var(--secondary);
+
+}
+
+.contact-form {
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 28px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .08);
+
+    display: grid;
+
+    gap: 22px;
+
+}
+
+.input-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+
+    padding: 16px 20px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 14px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+
+    transition: .3s;
+
+    background: #fff;
+
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+
+    outline: none;
+
+    border-color: var(--secondary);
+
+}
+
+.error {
+
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    color: #e53935;
+
+}
+
+.submit-btn {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: var(--secondary);
+
+    color: white;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.submit-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 15px 35px rgba(251, 137, 40, .35);
+
+}
+
+@media(max-width:950px) {
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .contact-info {
+
+        text-align: center;
+
+    }
+
+    .info-item {
+
+        justify-content: center;
+
+    }
+
+}

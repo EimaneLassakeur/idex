@@ -1,0 +1,93 @@
+.cta {
+
+    background: linear-gradient(135deg,
+            #024E7E,
+            #0D1117);
+
+    color: white;
+
+    padding: 140px 0;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.cta::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+
+    height: 600px;
+
+    background: #FB892820;
+
+    border-radius: 50%;
+
+    top: -250px;
+
+    left: -200px;
+
+    filter: blur(120px);
+
+}
+
+.cta h2 {
+
+    font-size: 64px;
+
+    margin-bottom: 25px;
+
+}
+
+.cta p {
+
+    font-size: 22px;
+
+    opacity: .9;
+
+    margin-bottom: 50px;
+
+}
+
+.cta-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+.secondary-btn {
+
+    padding: 18px 35px;
+
+    border: 2px solid white;
+
+    color: white;
+
+    border-radius: 50px;
+
+    background: none;
+
+    transition: .35s;
+
+}
+
+.secondary-btn:hover {
+
+    background: white;
+
+    color: var(--primary);
+
+}

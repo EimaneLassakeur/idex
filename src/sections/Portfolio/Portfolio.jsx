@@ -6,37 +6,37 @@ const projects = [
     {
         title: "منصة تجارة إلكترونية",
         category: "Web",
-        image: "/images/project1.jpg"
+        image: "/projects/project1.jpg"
     },
 
     {
         title: "هوية بصرية لشركة",
         category: "Branding",
-        image: "/images/project2.jpg"
+        image: "/projects/project2.jpg"
     },
 
     {
         title: "حملة تسويق رقمي",
         category: "Marketing",
-        image: "/images/project3.jpg"
+        image: "/projects/project3.jpg"
     },
 
     {
         title: "لوحة تحكم احترافية",
         category: "UI/UX",
-        image: "/images/project4.jpg"
+        image: "/projects/project4.jpg"
     },
 
     {
         title: "تطبيق إدارة أعمال",
         category: "Web",
-        image: "/images/project5.jpg"
+        image: "/projects/project5.jpg"
     },
 
     {
         title: "SEO لشركة محلية",
         category: "SEO",
-        image: "/images/project6.jpg"
+        image: "/projects/project6.jpg"
     }
 
 ];

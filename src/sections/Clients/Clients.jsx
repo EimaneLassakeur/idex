@@ -1,45 +1,69 @@
 import "./Clients.css";
-import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const clients = [
-    {
-        name: "SONATRACH",
-        logo: "/clients/SONATRACH.png",
-    },
-    {
-        name: "Condor",
-        logo: "/clients/Condor.png",
-    },
-    {
-        name: "Ooredoo",
-        logo: "/clients/Ooredoo.png",
-    },
-    {
-        name: "Mobilis",
-        logo: "/clients/Mobilis.png",
-    },
-    {
-        name: "Djezzy",
-        logo: "/clients/Djezzy.png",
-    },
-    {
-        name: "Cevital",
-        logo: "/clients/Cevital.png",
-    },
-    {
-        name: "Yassir",
-        logo: "/clients/Yassir.png",
-    },
-    {
-        name: "NCA Rouiba",
-        logo: "/clients/NCA Rouiba.png",
-    },
+    "SONATRACH",
+    "Condor",
+    "Ooredoo",
+    "Mobilis",
+    "Djezzy",
+    "Cevital",
+    "Yassir",
+    "NCA Rouiba"
 ];
 
-const slider = [...clients, ...clients];
-
 function Clients() {
+
+    const slider = useRef(null);
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    const mouseDown = (e) => {
+
+        isDown = true;
+
+        slider.current.classList.add("dragging");
+
+        startX = e.pageX - slider.current.offsetLeft;
+
+        scrollLeft = slider.current.scrollLeft;
+
+    };
+
+    const mouseLeave = () => {
+
+        isDown = false;
+
+        slider.current.classList.remove("dragging");
+
+    };
+
+    const mouseUp = () => {
+
+        isDown = false;
+
+        slider.current.classList.remove("dragging");
+
+    };
+
+    const mouseMove = (e) => {
+
+        if (!isDown) return;
+
+        e.preventDefault();
+
+        const x = e.pageX - slider.current.offsetLeft;
+
+        const walk = (x - startX) * 2;
+
+        slider.current.scrollLeft = scrollLeft - walk;
+
+    };
+
     return (
+
         <section className="clients section" id="clients">
 
             <div className="container">
@@ -55,46 +79,54 @@ function Clients() {
 
                 </div>
 
-            </div>
+                <div
 
-            <div className="clients-wrapper">
+                    ref={slider}
 
-                <motion.div
-                    className="clients-track"
-                    animate={{
-                        x: ["0%", "-50%"],
-                    }}
-                    transition={{
-                        duration: 30,
-                        ease: "linear",
-                        repeat: Infinity,
-                    }}
+                    className="clients-slider"
+
+                    onMouseDown={mouseDown}
+
+                    onMouseLeave={mouseLeave}
+
+                    onMouseUp={mouseUp}
+
+                    onMouseMove={mouseMove}
+
                 >
 
-                    {slider.map((client, index) => (
+                    {clients.map((client, index) => (
 
                         <div
+
                             className="client-card"
+
                             key={index}
+
                         >
 
                             <img
-                                src={client.logo}
-                                alt={client.name}
+
+                                src={`/clients/${client}.png`}
+
+                                alt={client}
+
                             />
 
-                            <h4>{client.name}</h4>
+                            <h4>{client}</h4>
 
                         </div>
 
                     ))}
 
-                </motion.div>
+                </div>
 
             </div>
 
         </section>
+
     );
+
 }
 
 export default Clients;

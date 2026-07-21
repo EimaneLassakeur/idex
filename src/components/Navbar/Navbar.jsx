@@ -8,7 +8,7 @@ const navItems = [
     { label: "من نحن", id: "about" },
     { label: "الخدمات", id: "services" },
     { label: "أعمالنا", id: "portfolio" },
-    { label: "لماذا نحن", id: "why-us" },
+    // { label: "لماذا نحن", id: "why-us" },
     { label: "اتصل بنا", id: "contact" }
 ];
 
@@ -52,15 +52,14 @@ function Navbar() {
 
             <div className="container navbar-container">
 
-                <div
-                    className="logo"
-                    onClick={() => scrollToSection("hero")}
-                    style={{ cursor: "pointer" }}
+                {/* <button
+                    className="cta-btn"
+                    onClick={() => scrollToSection("contact")}
                 >
 
-                    <img src="/logo/logo.png" alt="IDEX" />
+                    ابدأ مشروعك
 
-                </div>
+                </button> */}
 
                 <ul className={`nav-links ${menu ? "active" : ""}`}>
 
@@ -77,14 +76,15 @@ function Navbar() {
 
                 </ul>
 
-                <button
-                    className="cta-btn"
-                    onClick={() => scrollToSection("contact")}
+                <div
+                    className="logo"
+                    onClick={() => scrollToSection("hero")}
+                    style={{ cursor: "pointer" }}
                 >
 
-                    ابدأ مشروعك
+                    <img src="/logo/logo.png" alt="IDEX" />
 
-                </button>
+                </div>
 
                 <button
                     className="mobile-btn"
